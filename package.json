@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./Arrays/arrays.js"
+    "start": "nodemon ./BigO/asymptotic_analysis.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/OliverIgnetik/Data-Structures-Algorithms-JS/issues"
   },
-  "homepage": "https://github.com/OliverIgnetik/Data-Structures-Algorithms-JS#readme"
+  "homepage": "https://github.com/OliverIgnetik/Data-Structures-Algorithms-JS#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {}
 }

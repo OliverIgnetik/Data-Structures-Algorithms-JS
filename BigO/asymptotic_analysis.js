@@ -2,6 +2,11 @@
 // 1. Readable
 // 2. Scalable
 
+// 3 pillars of good code
+// 1. Readable
+// 2. Memory
+// 3. Speed
+
 // Simple example
 const nemo = ['nemo'];
 const large = new Array(10000000).fill('nemo');
@@ -54,6 +59,6 @@ const numbers = [...Array(10).keys()];
 console.log('====================================');
 console.log('BigO Notation');
 console.log('====================================');
-const [num_operations, display] = linear_search(numbers);
+const [num_operations, display] = linear_search(numbers, 7);
 console.log(display);
 console.log(`The number of operations is ${num_operations}`);
