@@ -1,0 +1,21 @@
+{
+  "name": "JS-data-structures",
+  "version": "1.0.0",
+  "description": "1. Arrays\r 2. Graphs\r 3. Hashtables (dictionary)\r 4. Linked Lists\r 5. Stack and Queues",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./Arrays/arrays.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliverIgnetik/Data-Structures-Algorithms-JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OliverIgnetik/Data-Structures-Algorithms-JS/issues"
+  },
+  "homepage": "https://github.com/OliverIgnetik/Data-Structures-Algorithms-JS#readme"
+}
