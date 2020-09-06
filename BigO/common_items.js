@@ -44,9 +44,7 @@ const hashTableSolution = (array1, array2) => {
   const map = {};
   for (let i = 0; i < array1.length; i++) {
     const element = array1[i];
-    if (!map[element]) {
-      map[element] = true;
-    }
+    if (!map[element]) map[element] = true;
   }
   for (let j = 0; j < array2.length; j++) {
     const element = array2[j];

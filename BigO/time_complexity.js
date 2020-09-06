@@ -19,6 +19,8 @@ const compressThreeBoxes = (boxes) => {
   console.log(boxes[2]);
 };
 
+const anotherFunction = () => console.log('hello');
+
 // linear time - O(N)
 const funChallenge = (input) => {
   let a = 10; // O(1)
@@ -84,6 +86,7 @@ const printAllNumbersThenAllPairSums = (numbers) => {
   numbers.forEach((element) => console.log(element));
   console.log('and these are their sums:');
   //   O(N^2)
+  // two levels of indentation
   numbers.forEach((fnum) =>
     numbers.forEach((snum) => console.log(fnum + snum)),
   );

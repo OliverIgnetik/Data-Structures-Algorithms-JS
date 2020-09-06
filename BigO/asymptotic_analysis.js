@@ -22,7 +22,7 @@ function findNemo(array) {
   const display = found ? 'Found nemo!' : 'Nemo not found';
   console.log(display);
   let t1 = new Date();
-  console.log(`function evalutation took ${t1 - t0} ms`);
+  console.log(`function evaluation took ${t1 - t0} ms`);
 }
 
 console.log('====================================');
