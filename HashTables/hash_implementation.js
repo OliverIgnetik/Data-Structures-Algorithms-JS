@@ -1,5 +1,3 @@
-// This is an example of chaining with arrays
-
 class HashTable {
   constructor(size) {
     this.data = new Array(size);
@@ -13,6 +11,7 @@ class HashTable {
     }
     return hash;
   }
+
   // set method
   set(key, value) {
     const hash_value = this._hash(key);
@@ -22,6 +21,7 @@ class HashTable {
     this.data[hash_value].push([key, value]);
     return [key, value];
   }
+
   // get method
   get(key) {
     const hash_value = this._hash(key);
@@ -30,6 +30,7 @@ class HashTable {
       // we need to loop through the bucket which has key mapped to the same hash value
       // to find the appropriate key value pair
       for (let i = 0; i < currentBucket.length; i++) {
+        // key -> 0, value -> 1
         if (currentBucket[i][0] === key) {
           return currentBucket[i][1];
         }
@@ -81,7 +82,7 @@ myHashTable.set('apples', 500);
 console.log('GET GRAPES');
 console.log(myHashTable.get('grapes'));
 // look to find see the keys associated with hash values
-console.log('GET WITH COLLISION ON KEYS');
+console.log('GET KEYS WITH COLLISION');
 console.log(myHashTable.keys());
 console.log('GET KEYS WITHOUT COLLISION');
 console.log(myHashTable.keys_collision_prevention());

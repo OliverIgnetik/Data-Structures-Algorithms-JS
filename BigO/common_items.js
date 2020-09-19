@@ -23,6 +23,7 @@ console.log('====================================');
 
 console.log('SET SOLUTION');
 // here is one solution using sets
+// where a is the length of set a
 // O(a) time complexity
 // O(a+b) space complexity
 const commonItems = (array1, array2) => {
@@ -42,10 +43,12 @@ console.log('HASHTABLE IS THE MOST VERSATILE');
 const hashTableSolution = (array1, array2) => {
   if (array1.length === 0 || array2.length === 0) return false;
   const map = {};
+  // go through first array
   for (let i = 0; i < array1.length; i++) {
     const element = array1[i];
     if (!map[element]) map[element] = true;
   }
+  // then go through the second array
   for (let j = 0; j < array2.length; j++) {
     const element = array2[j];
     if (map[element]) return true;
@@ -58,8 +61,8 @@ console.log(hashTableSolution(array1, array2));
 console.log('====================================');
 
 console.log('JS HACK SOLUTION');
-// Here is another approach with hashtables
 // O(a) time complexity
+// this approach would perform worse then the set approach
 const JS_hack = (array1, array2) => {
   return array1.some((item) => array2.includes(item));
 };

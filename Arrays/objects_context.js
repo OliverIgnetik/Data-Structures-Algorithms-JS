@@ -2,7 +2,7 @@
 // in HTML this === window
 // so you can call this.alert('hello')
 console.log('INSIDE THE MODULE');
-console.log(this);
+console.log(this, '\n');
 
 // changing the context of this
 const object = {
@@ -10,7 +10,7 @@ const object = {
   ammunition: 1000,
   hello: function () {
     // print out this
-    console.log(this);
+    console.log(this, '\n');
   },
 };
 
@@ -24,12 +24,13 @@ class Player {
     this.type = type;
     console.log('player', this);
   }
-  // public fields syntax
-  introduce = () => {
+  // public fields syntax for methods
+  introduce() {
     console.log(`Hi I am ${this.name}, I'm a ${this.type}`);
-  };
+  }
 }
 
+// inheritance where the Wizard is a subclass of Player
 class Wizard extends Player {
   constructor(name, type) {
     super(name, type);
@@ -37,18 +38,22 @@ class Wizard extends Player {
   play() {
     console.log(`The Wizard, ${this.name}, uses a spell`);
   }
+  // the interface is the same but there is som added functionality
+  introduce() {
+    super.introduce();
+    console.log('I will turn you into a frog');
+  }
 }
 
 // instantiate new objects
 // expect to see some logs in the console from the player constructors
-const wizard1 = new Wizard('Shelly', 'Healer');
-const wizard2 = new Wizard('Shaun', 'Dark Magic');
+const player1 = new Player('Shelly', 'Warrior');
+const wizard2 = new Wizard('Shaun', 'Wizard');
 
 console.log('\n');
 
 // call object methods
-wizard1.introduce();
-wizard1.play();
+player1.introduce();
 console.log('\n');
 wizard2.introduce();
-wizard2.play();
+console.log('\n');

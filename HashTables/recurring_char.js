@@ -10,7 +10,6 @@ const reccuring_char = (input) => {
   for (const item of values) {
     if (!m.has(item)) {
       m.add(item);
-      console.log(m);
     } else {
       return item;
     }
@@ -18,4 +17,4 @@ const reccuring_char = (input) => {
   return undefined;
 };
 
-console.log(reccuring_char([1, 2, 3, 5]));
+console.log(reccuring_char([1, 2, 3, 5, 1]));

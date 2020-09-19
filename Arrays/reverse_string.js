@@ -5,12 +5,15 @@
 function reverse1(str) {
   const original = [...str];
   let reversedString = '';
-  for (let i = 0; i < str.length; i++) {
+  // while loop is better suited here
+  while (original.length !== 0) {
     reversedString += original.pop();
   }
   return reversedString;
 }
 
+// O(N) time
+// O(N) space
 function reverse2(str) {
   const backwards = [];
   for (let i = str.length - 1; i >= 0; i--) {
@@ -19,10 +22,12 @@ function reverse2(str) {
   return backwards.join('');
 }
 
+// pythonic hack
 function reverse3(str) {
   return str.split('').reverse().join('');
 }
 
+// ES6 hack
 const reverse4 = (str) => [...str].reverse().join('');
 
 console.log('====================================');

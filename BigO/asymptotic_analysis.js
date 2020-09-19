@@ -1,16 +1,8 @@
-// What is good code?
-// 1. Readable
-// 2. Scalable
-
-// 3 pillars of good code
-// 1. Readable
-// 2. Memory
-// 3. Speed
-
 // Simple example
 const nemo = ['nemo'];
 const large = new Array(10000000).fill('nemo');
 
+// not very efficient because you loop through the whole array no matter what
 function findNemo(array) {
   let t0 = new Date();
   let found = false;
@@ -23,13 +15,13 @@ function findNemo(array) {
   console.log(display);
   let t1 = new Date();
   console.log(`function evaluation took ${t1 - t0} ms`);
+  return;
 }
 
 console.log('====================================');
 console.log('SINGLE ELEMENT');
 console.log('====================================');
 findNemo(nemo);
-
 console.log('====================================');
 console.log(`Array with size ${large.length}`);
 console.log('====================================');

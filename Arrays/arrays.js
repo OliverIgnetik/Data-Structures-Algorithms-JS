@@ -14,7 +14,7 @@ console.log('\n');
 
 // 32 bit system
 // byte = 8 bits
-// 4*4 = 16 bytes of storage
+// 16*8 bits = 16 bytes of storage
 
 // access operation O(1)
 console.log('GET OPERATION');
@@ -29,7 +29,7 @@ console.log(strings);
 console.log('\n');
 
 // pop item O(1)
-console.log('PUSH OPERATION');
+console.log('POP OPERATION');
 console.log(strings);
 strings.pop();
 console.log(strings);

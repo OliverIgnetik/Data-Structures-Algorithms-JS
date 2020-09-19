@@ -2,6 +2,7 @@
 class myArray {
   constructor() {
     this.length = 0;
+    // use of dictionary makes dynamic memory allocation easier
     this.data = {};
   }
   // O(1)
@@ -39,9 +40,11 @@ class myArray {
   // insert new item in array
   insert(index, item) {
     this.push(null);
+    // shift everything to the right
     for (let i = this.length - 1; i > index; i--) {
       this.data[i] = this.data[i - 1];
     }
+    // set the index once your done
     this.data[index] = item;
   }
 }
@@ -63,8 +66,8 @@ console.log('after deletion at index 1');
 console.log('====================================');
 console.log(arr);
 
-arr.insert(1, 'alien');
+arr.insert(0, 'alien');
 console.log('====================================');
-console.log('after insert at index 2');
+console.log('after insert at index 0');
 console.log('====================================');
 console.log(arr);
