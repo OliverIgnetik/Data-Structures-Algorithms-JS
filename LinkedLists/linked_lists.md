@@ -28,3 +28,5 @@ In the case of having some kind of condition. The insertion is O(N):
 In Javscript variables that are not being used (ie. nothing is pointing to it) are subjected to automatic garbage collection. Some other languages don't have automatic garbage collection so you have to keep track of unused memory allocations.
 
 Garbage collection avoids memory leaks.
+
+Visual algo linked list insertion : https://visualgo.net/en/list?slide=1

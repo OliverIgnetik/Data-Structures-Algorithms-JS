@@ -32,38 +32,95 @@ class LinkedList {
     this.tail.next = new Node(value, null);
     this.tail = this.tail.next;
     this.length++;
+    return this;
   }
 
   prepend(value) {
     this.head = new Node(value, this.head);
     this.length++;
+    return this;
   }
 
-  // insert = (value) => {
-  //   // add one to the length
-  //   this.length++;
-  //   let node = this.head;
-  //   while (node.next) {
-  //     node = node.next;
-  //   }
-  //   node.next = this.create_node(value, null);
-  //   this.tail = node.next;
-  //   return this.tail;
-  // };
+  insert(index, value) {
+    if (index > this.length || index < 0) {
+      return new Error('index out of bounds');
+    }
+    if (index === 0) {
+      return this.prepend(value);
+    }
+    if (index === this.length) {
+      return this.append(value);
+    }
+    const node = this.traversal(index - 1);
+    // insert infront of node at that index
+    const new_node = new Node(value, node.next);
+    node.next = new_node;
+    this.length++;
+    return this;
+  }
+
+  remove(index) {
+    if (index > this.length || index < 0) {
+      return new Error('index out of bounds');
+    }
+    if (index === 0) {
+      this.head = this.head.next;
+      this.length--;
+      return this;
+    }
+    const node = this.traversal(index - 1);
+    if (index === this.length - 1) {
+      this.tail = node;
+      this.tail.next = null;
+      this.length--;
+      return this;
+    }
+    node.next = node.next.next;
+    this.length--;
+    return this;
+  }
+
+  traversal(index) {
+    let cur = this.head;
+    let i = 0;
+    // stop when we get to the index we want
+    while (i !== index) {
+      cur = cur.next;
+      i++;
+    }
+    return cur;
+  }
+
+  asList() {
+    const arr = [];
+    let cur_node = this.head;
+    while (cur_node) {
+      arr.push(cur_node.value);
+      cur_node = cur_node.next;
+    }
+    return arr;
+  }
 }
 
 const l = new LinkedList(10);
-
-console.log('====================================');
-console.log('INITIAL LINKED LIST');
-console.log(l);
-console.log('====================================');
-console.log('\n');
-console.log('====================================');
 l.append(5);
 l.append(16);
-l.prepend(0);
-console.log(l);
-console.log('====================================');
-console.log('\n');
-console.log(l.head.next);
+console.log('APPEND SOME VALUES');
+console.log(l.asList());
+console.log('INSERT AT INDEX 1');
+l.insert(1, -11);
+console.log(l.asList());
+console.log('REMOVE HEAD');
+l.remove(0);
+console.log(l.asList());
+console.log('REMOVE TAIL');
+l.remove(2);
+console.log(l.asList());
+console.log('APPEND');
+l.append(3);
+l.append(7);
+l.append(5);
+console.log(l.asList());
+console.log('REMOVE INDEX 2');
+l.remove(2);
+console.log(l.asList());
