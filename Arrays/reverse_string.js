@@ -22,7 +22,7 @@ function reverse2(str) {
   return backwards.join('');
 }
 
-// pythonic hack
+// JS hack
 function reverse3(str) {
   return str.split('').reverse().join('');
 }

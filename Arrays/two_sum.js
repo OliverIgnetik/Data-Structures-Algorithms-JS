@@ -3,7 +3,7 @@
 // assumptions : exactly one solution
 
 // sets are a great way of turning quadratic complexity
-//  problems into linear time complexity
+// problems into linear time complexity
 
 const two_sum = (arr, target) => {
   // key, value : complement (target - element), index

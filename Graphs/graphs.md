@@ -25,7 +25,7 @@ Data structures that are graphs :
 - google maps
 - network structures
 
-[Visualalgo implementations](https://visualgo.net/en/graphds)
+[visualgo implementations](https://visualgo.net/en/graphds)
 
 ## Pros and Cons
 

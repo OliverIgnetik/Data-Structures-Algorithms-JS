@@ -10,7 +10,7 @@ Heaps are great at doing comparative operations.
 
 ## Min heap
 
-Rule : parent is less then the its children
+Rule : parent is less then its children
 
 ## Max heap
 
@@ -24,6 +24,11 @@ Elements are served before other elements based on their importance.
 
 - Using left to right insertion we can preserve priority in a binary heap
 
+#### Applications
+
+- aircraft boarding procedure
+- Security clearances
+
 ### Pros
 
 - Better then O(N)
@@ -35,7 +40,7 @@ Elements are served before other elements based on their importance.
 
 - Slow lookup
 
-### Tries (prefix tree)
+# Tries (prefix tree)
 
 ![Trie example](.\Trie.png)
 

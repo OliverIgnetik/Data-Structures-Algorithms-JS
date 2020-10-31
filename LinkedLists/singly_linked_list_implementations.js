@@ -100,6 +100,24 @@ class LinkedList {
     }
     return arr;
   }
+
+  reverse() {
+    let cur = this.head;
+    const original_head = cur;
+
+    let next_node;
+    let prev_node = null;
+    while (cur) {
+      next_node = cur.next;
+      cur.next = prev_node;
+      prev_node = cur;
+      cur = next_node;
+    }
+    this.head = prev_node;
+    this.tail = original_head;
+
+    return this;
+  }
 }
 
 const l = new LinkedList(10);
@@ -124,3 +142,9 @@ console.log(l.asList());
 console.log('REMOVE INDEX 2');
 l.remove(2);
 console.log(l.asList());
+console.log('REVERSE');
+l.reverse();
+console.log(l.asList());
+console.log('====================================');
+console.log('New tail :', l.tail);
+console.log('====================================');

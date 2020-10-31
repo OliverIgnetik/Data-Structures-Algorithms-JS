@@ -1,5 +1,5 @@
 {
-  "name": "JS-data-structures",
+  "name": "js_data_structures",
   "version": "1.0.0",
   "description": "1. Arrays\r 2. Graphs\r 3. Hashtables (dictionary)\r 4. Linked Lists\r 5. Stack and Queues",
   "main": "index.js",

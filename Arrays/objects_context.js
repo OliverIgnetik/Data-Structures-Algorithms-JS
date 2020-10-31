@@ -22,9 +22,9 @@ class Player {
   constructor(name, type) {
     this.name = name;
     this.type = type;
-    console.log('player', this);
+    console.log('[Player constructor]', this);
   }
-  // public fields syntax for methods
+  // parent method
   introduce() {
     console.log(`Hi I am ${this.name}, I'm a ${this.type}`);
   }
@@ -38,7 +38,7 @@ class Wizard extends Player {
   play() {
     console.log(`The Wizard, ${this.name}, uses a spell`);
   }
-  // the interface is the same but there is som added functionality
+  // the interface is the same but there is some added functionality
   introduce() {
     super.introduce();
     console.log('I will turn you into a frog');

@@ -1,5 +1,3 @@
-const { last } = require('lodash');
-
 class Node {
   constructor(value, next, prev) {
     this.value = value;
@@ -36,6 +34,7 @@ class DoublyLinkedList {
     this.head.prev = new Node(value, this.head, null);
     this.head = this.head.prev;
     this.length++;
+    return this;
   }
   asList() {
     const arr = [];
@@ -97,6 +96,7 @@ class DoublyLinkedList {
 
   reverse() {
     let cur = this.head;
+    const original_head = cur;
     // temporary pointer
     let next_node;
     while (cur) {
@@ -107,6 +107,8 @@ class DoublyLinkedList {
       // point cur at the next node
       cur = next_node;
     }
+    this.head = this.tail;
+    this.tail = original_head;
     return this;
   }
 }
@@ -125,10 +127,12 @@ console.log(l.asList());
 console.log('\nremove tail');
 l.remove(l.length - 1);
 console.log(l.asList());
-l.insert(1, -2);
 l.insert(2, 5);
-l.remove(1);
-console.log('\nInsert and remove operations\n', l.asList());
+console.log('\nInsert at index 2\n', l.asList());
 console.log('\nreverse');
 l.reverse();
-console.log(l);
+console.log(l.asList());
+console.log('\nNEW HEAD NODE');
+console.log('====================================');
+console.log(l.head);
+console.log('====================================');

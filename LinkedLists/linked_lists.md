@@ -59,10 +59,10 @@ When should you use one of the other?
 
 #### Singly
 
-Pros : less memory and simple implementation, faster execution of operations
-Cons : no reversal, you need the head reference
+- Pros : less memory and simple implementation, faster execution of operations
+- Cons : no reversal, you need the head reference
 
 #### Doubly
 
-Cons : reversal
-Pros : more memory and more complext implementation, slower execution of operations
+- Cons : reversal
+- Pros : more memory and more complex implementation, slower execution of operations

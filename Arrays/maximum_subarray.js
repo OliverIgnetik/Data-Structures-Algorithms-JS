@@ -5,9 +5,11 @@
 // brute force approach
 // O(N!)
 // linear time greedy approach
+// sacrifice space complexity for time complexity
+// this is a common strategy
 // O(N)
 const max_sub = (arr) => {
-  const max_sub = [];
+  let max_sub = [];
   let max_sum = 0;
   return [max_sub, max_sum];
 };

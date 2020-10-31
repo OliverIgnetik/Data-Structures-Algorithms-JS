@@ -50,7 +50,7 @@
 
 Javascript is a single threaded language that can be non-blocking.
 
-A program allocates memory and parse and execute code.
+A program allocates memory and the interepreter parses and execute code.
 
 The **V8 engine** (compiles JS into executable machine code) in chrome consists of:
 

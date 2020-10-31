@@ -56,7 +56,7 @@ class Graph {
       for (let vertex of nodeConnections) {
         connections += vertex + ' ';
       }
-      console.log(node + '-->' + connections);
+      console.log(node + ' --> ' + connections);
     }
   }
 }

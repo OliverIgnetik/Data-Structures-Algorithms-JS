@@ -22,12 +22,14 @@ class Queue {
       this.length--;
       return first;
     }
-    // we need to grab the second from the front
+    // grab the first item
     const first = this.first;
     let cur = this.last;
+    // we need to grab the second from the front
     while (cur.next.next) {
       cur = cur.next;
     }
+    // make the next node null
     cur.next = null;
     this.first = cur;
     this.length--;

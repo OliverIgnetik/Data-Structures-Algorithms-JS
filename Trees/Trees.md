@@ -23,9 +23,9 @@ They are also a **Directed Acyclic Graph (DAG)**, which is very useful in implem
 
 ## Binary Tree
 
-- each node can have 0,1 or 2 children
+- each node can have 0, 1 or 2 children
 - the left subtree has every element less then the root of the tree
-- the right subtree has every element less then the root of the tree
+- the right subtree has every element greater then the root of the tree
 - the number of nodes doubles at each level
 - Perfect Binary Tree has the property that the number of nodes in the bottom level is equal to the sum of all the other nodes in the tree plus one.
 
@@ -42,9 +42,15 @@ They are also a **Directed Acyclic Graph (DAG)**, which is very useful in implem
 
 #### Properties
 
-- PROPERTY : 8 = (4 + 2 + 1) + 1
-- PROPERTY : TOTAL NODES = 2^H - 1 (where H = height)
-- TOTAL NUMBER OF DECISIONS = 3 = log(8)
+- PROPERTY : TOTAL NODES = 2^H - 1,
+
+  (where H = height)
+
+PROOF : 8 = (4 + 2 + 1) + 1
+
+- TOTAL NUMBER OF DECISIONS = log(TOTAL NODES)
+
+PROOF : 3 = log(8)
 
 **Note**: log(N) means that on each decision the search space is reduced
 
@@ -62,14 +68,14 @@ They are decent at everything (O(log(N) operations across the board if the tree 
 #### PROS
 
 - Search and lookup is very easy (most operations are O(N))
-- Ordered
+- Relationships and order are preserved
 - Flexible size
 
 #### CONS
 
 - Insert and delete is slower then a hashtable
 - No O(1) operations
-- **Unbalanced binary search trees** slow down lookup operations
+- **Unbalanced binary search trees** slow down lookup operations. This is because they basically reduce to linked list data structures.
 
 ### AVL Red/Black Trees
 
