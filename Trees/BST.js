@@ -51,6 +51,8 @@ class BST {
       }
     }
   }
+
+  // DFS Traversals
   print_inorder(cur) {
     if (cur !== null) {
       this.print_inorder(cur.left);
@@ -180,26 +182,32 @@ const traverse = (node) => {
   return tree;
 };
 
-t = new BST();
-t.insert(2);
-t.insert(1);
-t.insert(3);
-t.insert(5);
-t.insert(6);
+if (require.main === module) {
+  t = new BST();
+  t.insert(2);
+  t.insert(1);
+  t.insert(3);
+  t.insert(5);
+  t.insert(6);
 
-console.log('PREORDER\n');
-t.print('preorder');
+  console.log('PREORDER\n');
+  t.print('preorder');
 
-console.log('\nINORDER\n');
-t.print('inorder');
+  console.log('\nINORDER\n');
+  t.print('inorder');
 
-console.log('\nPOSTORDER\n');
-t.print('postorder');
+  console.log('\nPOSTORDER\n');
+  t.print('postorder');
 
-console.log('\n', 'BST : ', JSON.stringify(traverse(t.root)));
+  console.log('\n', 'BST : ', JSON.stringify(traverse(t.root)));
 
-const myNumber = 3;
-const msg = t.lookup(myNumber)
-  ? `${myNumber} is in BST`
-  : `${myNumber} is not in BST`;
-console.log('\n', msg);
+  const myNumber = 3;
+  const msg = t.lookup(myNumber)
+    ? `${myNumber} is in BST`
+    : `${myNumber} is not in BST`;
+  console.log('\n', msg);
+}
+
+exports.BST = BST;
+exports.traverse = traverse;
+exports.Node = Node;

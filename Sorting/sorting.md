@@ -101,6 +101,10 @@ To sort an array of size n in ascending order:
 
 ## Merge Sort
 
+![Merge Sort gif](./merge-sort-gif.gif)
+
+**ONE OF THE BEST WAYS TO LEARN RECURSIVE ALGORITHMS IS USING THE DEBUGGER IN CHROME**
+
 **Time complexity**
 
 - Average : O(N\*logN)
@@ -120,6 +124,8 @@ Merge Sort is a divide and conquer algorithm. It divides the input array into tw
 - e-commerce applications
 
 ## Quick Sort
+
+![Quick Sorting gif](./quicksort-gif.gif)
 
 **Time complexity**
 
@@ -154,22 +160,6 @@ _Resources_
 - Language is good for recursion
 - Time complexity matters
 - Space complexity matters
-
-## Which Sort is Best?
-
-**The choice of sorting algorithms depends on the context.**
-
-- Insertion Sort
-  - input is small or the items are mostly sorted
-- Bubble Sort
-  - Never really going to use this
-- Selection Sort
-  - Teaching mechanism
-- Merge Sort
-  - Worried about worst case scenarios
-  - Be wary of the **space complexity** O(N).
-- Quick Sort
-  - Be wary of picking the pivot incorrectly
 
 ## Heap Sort
 
@@ -210,3 +200,19 @@ Radix sort is an integer sorting algorithm that sorts data with integer keys by 
 ![Radix sort](.\Radix-Sort.png)
 
 [Radix Sort animation](https://www.cs.usfca.edu/~galles/visualization/RadixSort.html)
+
+## Which Sort is Best?
+
+**The choice of sorting algorithms depends on the context.**
+
+- Insertion Sort
+  - input is small or the items are mostly sorted
+- Bubble Sort
+  - Never really going to use this
+- Selection Sort
+  - Teaching mechanism
+- Merge Sort
+  - Worried about worst case scenarios
+  - Be wary of the **space complexity** O(N).
+- Quick Sort
+  - Be wary of picking the pivot incorrectly
