@@ -125,6 +125,8 @@ In relation to Binary Search Trees the different types of traversals are actuall
 
 ## Dijkstra Algorithm
 
+It is a type of _greedy algorithm_. _Greedy algorithms_ perform unecessary computations because they calculate local optimums, which in the long run can be misleading.
+
 _Time Complexity_ : O((E+V)log(V))
 
 The algorithm exists in many variants. Dijkstra's original algorithm found the shortest path between two given nodes, but a more common variant fixes a single node as the "source" node and finds shortest paths from the source to all other nodes in the graph, producing a shortest-path tree.

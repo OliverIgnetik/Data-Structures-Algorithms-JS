@@ -2,6 +2,11 @@
 
 ## Overview
 
+**Practice questions**
+
+1. [Udemy Practice Question Resources](https://www.udemy.com/course/master-the-coding-interview-data-structures-algorithms/learn/lecture/12246878#overview)
+2. [Hackerrank](https://www.hackerrank.com/)
+
 Technical course map : https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
 
 ### Resume Resources
