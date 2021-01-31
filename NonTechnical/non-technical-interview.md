@@ -183,7 +183,7 @@ _TIPS_
 
 **GUIDING PRINCIPLES**
 
-1. Which company do you want to work out?
+1. Which company do you want to work at?
 2. Is there an offer that you feel you are under qualified for
 3. Long term growth potential
 4. Salary and benefits?
