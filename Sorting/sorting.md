@@ -195,6 +195,8 @@ Counting sort starts by going through A, and for each element A[i], it goes to t
 
 Time complexity : O(kN)
 
+The performance of this algorithm is highly correlated to the element with the largest amount of digits.
+
 Radix sort is an integer sorting algorithm that sorts data with integer keys by grouping the keys by individual digits that share the same _significant position_ and _place value_. Radix sort uses counting sort as a subroutine to sort an array of numbers. Because integers can be used to represent strings (by hashing the strings to integers), radix sort works on data types other than just integers.
 
 ![Radix sort](.\Radix-Sort.png)

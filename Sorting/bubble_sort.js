@@ -5,16 +5,16 @@ function bubbleSort(array) {
     // bubble up to ith last element
     // to optimize bubble sort we can use a variable to keep track
     // of swapping
-    let swapped = true;
+    let noSwap = true;
     for (let j = 0; j < array.length - i; j++) {
       if (array[j] > array[j + 1]) {
         let temp = array[j];
         array[j] = array[j + 1];
         array[j + 1] = temp;
-        swapped = false;
+        noSwap = false;
       }
     }
-    if (swapped) break;
+    if (noSwap) break;
   }
 }
 
