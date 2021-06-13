@@ -27,8 +27,10 @@ console.log(`Array with size ${large.length}`);
 console.log('====================================');
 findNemo(large);
 
-// Asymptotic analysis is independent of hardware and is the language we
-// use to explain time complexity
+/*
+Asymptotic analysis is independent of hardware and is the language we
+use to explain time complexity 
+*/
 
 // We focus on the number of operations
 function linear_search(array, number = 5) {

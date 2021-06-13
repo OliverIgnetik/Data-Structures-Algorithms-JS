@@ -62,16 +62,16 @@ class BST {
   }
   print_postorder(cur) {
     if (cur !== null) {
-      this.print_inorder(cur.left);
-      this.print_inorder(cur.right);
+      this.print_postorder(cur.left);
+      this.print_postorder(cur.right);
       console.log(cur.value);
     }
   }
   print_preorder(cur) {
     if (cur !== null) {
       console.log(cur.value);
-      this.print_inorder(cur.left);
-      this.print_inorder(cur.right);
+      this.print_preorder(cur.left);
+      this.print_preorder(cur.right);
     }
   }
   lookup(value) {

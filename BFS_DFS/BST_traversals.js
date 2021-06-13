@@ -68,6 +68,7 @@ class BST_BFS extends Trees.BST {
   DFS_traversal = () => {
     const stack = [];
     const seen = new Set();
+    const list = [];
 
     // add the root to the queue
     stack.push(this.root);
@@ -79,14 +80,7 @@ class BST_BFS extends Trees.BST {
       if (!seen.has(cur_node.value)) {
         // process the node
         seen.add(cur_node.value);
-        console.log(cur_node.value);
-      }
-
-      if (cur_node.right) {
-        const right_child = cur_node.right;
-        if (!seen.has(right_child.value)) {
-          stack.push(right_child);
-        }
+        list.push(cur_node.value);
       }
 
       // add children if they exist
@@ -96,9 +90,17 @@ class BST_BFS extends Trees.BST {
           stack.push(left_child);
         }
       }
+      if (cur_node.right) {
+        const right_child = cur_node.right;
+        if (!seen.has(right_child.value)) {
+          stack.push(right_child);
+        }
+      }
     }
+    return list;
   };
 
+  // we validate the tree using a level by level approach
   validate_BST = () => {
     const queue = [];
     queue.push(this.root);
@@ -119,37 +121,40 @@ class BST_BFS extends Trees.BST {
         }
       }
     }
+    // if we pass the test for every node then the tree is valid
     return true;
   };
 }
 
-t = new BST_BFS();
-t.insert(5);
-t.insert(3);
-t.insert(10);
-t.insert(2);
-t.insert(4);
-t.insert(8);
-t.insert(12);
+if (require.main == module) {
+  t = new BST_BFS();
+  t.insert(5);
+  t.insert(3);
+  t.insert(10);
+  t.insert(2);
+  t.insert(4);
+  t.insert(8);
+  t.insert(12);
 
-// Do the BFS traversal
-console.log('====================================');
-console.log('BFS');
-console.log('====================================');
-t.BFS_traversal();
+  // Do the BFS traversal
+  console.log('====================================');
+  console.log('BFS');
+  console.log('====================================');
+  t.BFS_traversal();
 
-console.log('====================================');
-console.log('BFS Recursive');
-console.log('====================================');
-console.log(t.BFS_R([t.root], []));
+  console.log('====================================');
+  console.log('BFS Recursive');
+  console.log('====================================');
+  console.log(t.BFS_R([t.root], []));
 
-// Do the DFS traversal
-console.log('====================================');
-console.log('DFS');
-console.log('====================================');
-t.DFS_traversal();
+  // Do the DFS traversal
+  console.log('====================================');
+  console.log('DFS');
+  console.log('====================================');
+  console.log(t.DFS_traversal());
 
-console.log('====================================');
-console.log('BST VALIDATION');
-console.log('====================================');
-console.log(`${t.validate_BST() ? 'Valid BST' : 'Invalid BST'}`);
+  console.log('====================================');
+  console.log('BST VALIDATION');
+  console.log('====================================');
+  console.log(`${t.validate_BST() ? 'Valid BST' : 'Invalid BST'}`);
+}

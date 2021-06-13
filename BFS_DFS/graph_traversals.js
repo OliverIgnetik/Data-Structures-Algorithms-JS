@@ -13,6 +13,9 @@ class Graph extends graphImplementation.Graph {
     // Start from 0
     const start = Object.keys(this.adjacent_list)[0];
     queue.push(start);
+    for (let key of Object.keys(this.adjacent_list)) {
+      levels_map.set(key, Infinity);
+    }
     levels_map.set(start, 0);
 
     while (queue.length > 0) {
@@ -28,7 +31,9 @@ class Graph extends graphImplementation.Graph {
       for (let i = 0; i < neighbours.length; i++) {
         if (!seen.has(neighbours[i])) {
           queue.push(neighbours[i]);
-          levels_map.set(neighbours[i], levels_map.get(cur_node) + 1);
+          // You need to check that this is the shortest path ie. the level
+          if (levels_map.get(cur_node) + 1 < levels_map.get(neighbours[i]))
+            levels_map.set(neighbours[i], levels_map.get(cur_node) + 1);
         }
       }
     }

@@ -33,6 +33,7 @@ const fib_r = (index_value) => {
 The diagram above shows that some function evaluations are calculated more then once which leads to exponential time complexity (O(2^N)).
 
 ```javascript
+// we make use of lexical closure
 const memoized_fib = () => {
   const cache = {};
   return (fib = (value) => {
@@ -48,19 +49,6 @@ const memoized_fib = () => {
 };
 ```
 
-## Memoization - caching
-
-Caching is a way to store values so that you can use them later on.
-
-```javascript
-// if the function takes a long time we are wasting computation because we have computed the result already
-costly_function(10);
-costly_function(10);
-costly_function(10);
-```
-
-Below we can see how functions can be memoized to use a cache in combination with closure by returning a function within a function like we do commonly in React. This way the _cache_ is part of the _function scope_ and not the _global scope_.
-
 ### GENERAL FORM OF MEMOIZATION
 
 ```javascript
@@ -75,6 +63,19 @@ const memoized_function = () => {
   };
 };
 ```
+
+## Memoization - caching
+
+Caching is a way to store values so that you can use them later on.
+
+```javascript
+// if the function takes a long time we are wasting computation because we have computed the result already
+costly_function(10);
+costly_function(10);
+costly_function(10);
+```
+
+Below we can see how functions can be memoized to use a cache in combination with closure by returning a function within a function like we do commonly in React. This way the _cache_ is part of the _function scope_ and not the _global scope_.
 
 ### EXAMPLE WORKING FUNCTION
 

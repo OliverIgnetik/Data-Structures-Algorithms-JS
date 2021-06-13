@@ -27,7 +27,7 @@ They are also a **Directed Acyclic Graph (DAG)**, which is very useful in implem
 - the left subtree has every element less then the root of the tree
 - the right subtree has every element greater then the root of the tree
 - the number of nodes doubles at each level
-- Perfect Binary Tree has the property that the number of nodes in the bottom level is equal to the sum of all the other nodes in the tree plus one.
+- Perfect Binary Tree has the property that the number of nodes in the bottom level is equal to the **sum of all the other nodes in the tree plus one**.
 
 ### Perfectly Balanced Binary Tree
 
@@ -42,17 +42,29 @@ They are also a **Directed Acyclic Graph (DAG)**, which is very useful in implem
 
 #### Properties
 
-- PROPERTY : TOTAL NODES = 2^H - 1,
+pg. 289 Essential Algorithms Rod Stephens
 
-  (where H = height)
+Note : there are a number of other properties that trees have, but these are the most important
 
-PROOF : 8 = (4 + 2 + 1) + 1
+---
 
-- TOTAL NUMBER OF DECISIONS = log(TOTAL NODES)
+- TOTAL_NODES = 2^(H+1) - 1,
 
-PROOF : 3 = log(8)
+(where H = height)
+
+PROOF : 2^(2+1) = (4 + 2 + 1) + 1
+
+(ie. 2^H = TOTAL_NODES+1)
+
+---
+
+- TOTAL NUMBER OF DECISIONS = log_2(2^(H+1))
+
+PROOF : (2+1) = log_2(8) = 3
 
 **Note**: log(N) means that on each decision the search space is reduced
+
+---
 
 ### Types of tree
 

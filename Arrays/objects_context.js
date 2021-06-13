@@ -34,6 +34,7 @@ class Player {
 class Wizard extends Player {
   constructor(name, type) {
     super(name, type);
+    console.log('A Wizard has been created');
   }
   play() {
     console.log(`The Wizard, ${this.name}, uses a spell`);

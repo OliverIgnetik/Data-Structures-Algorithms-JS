@@ -6,6 +6,7 @@ const quickSort = (array) => {
 };
 
 const _quickSort = (array, left, right) => {
+  // base case
   if (left >= right) {
     return;
   }

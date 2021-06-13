@@ -1,5 +1,7 @@
 let calculations = 0;
 // Time complexity is O(N) compared to O(2^N)
+// This approach trades space for time
+// It makes use of lexical closure in that the fib_r function remembers the state of it's parent function
 const memoized_fib_r = () => {
   const cache = {};
   return function fib_r(value) {
@@ -22,7 +24,7 @@ const memoized_fib_r = () => {
 
 const bottomUp_approach = (n) => {
   const answer = [0, 1];
-  for (let i = 0; i <= n; i++) {
+  for (let i = 2; i <= n; i++) {
     answer.push(answer[i - 2] + answer[i - 1]);
   }
   return answer.pop();
@@ -39,3 +41,5 @@ console.log('====================================');
 console.log(msg);
 console.log('Number of calculations :', calculations);
 console.log('====================================');
+
+console.log(bottomUp_approach(value));

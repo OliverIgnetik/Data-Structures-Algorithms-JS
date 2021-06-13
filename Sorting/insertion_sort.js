@@ -8,18 +8,21 @@ function insertionSort(array) {
       array[j + 1] = array[j];
       j--;
     }
-
+    /* We have found the correct spot
+    the element */
     array[j + 1] = element;
 
-    // for (let j = i - 1; j >= 0; j--) {
-    //   if (element < array[j]) {
-    //     let temp = array[j];
-    //     array[j] = element;
-    //     array[j + 1] = temp;
-    //   } else {
-    //     break;
-    //   }
-    // }
+    /*
+    for (let j = i - 1; j >= 0; j--) {
+       if (element < array[j]) {
+         let temp = array[j];
+         array[j] = element;
+         array[j + 1] = temp;
+       } else {
+         break;
+       }
+    }
+    */
   }
 }
 

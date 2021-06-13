@@ -13,12 +13,6 @@
 // Databases
 // Caches
 
-// example hash table
-const basket = {};
-basket.grapes = 10000;
-
-console.log(basket);
-
 function hash(key) {
   let hash = 0;
   for (let i = 0; i < key.length; i++) {

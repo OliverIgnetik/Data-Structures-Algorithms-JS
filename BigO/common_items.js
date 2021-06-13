@@ -1,5 +1,7 @@
-// Given 2 arrays create a function that let's a user know
-// whether these two arrays contain any common items
+/* 
+Given 2 arrays create a function that let's a user know
+whether these two arrays contain any common items 
+*/
 
 const array1 = ['a', 'b', 'c'];
 const array2 = [1, 2, 'a'];
@@ -61,8 +63,11 @@ console.log(hashTableSolution(array1, array2));
 console.log('====================================');
 
 console.log('JS HACK SOLUTION');
-// O(a) time complexity
-// this approach would perform worse then the set approach
+/* 
+O(a) time complexity
+This approach would perform worse then the set approach
+*/
+
 const JS_hack = (array1, array2) => {
   return array1.some((item) => array2.includes(item));
 };

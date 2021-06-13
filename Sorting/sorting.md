@@ -103,7 +103,7 @@ To sort an array of size n in ascending order:
 
 ![Merge Sort gif](./merge-sort-gif.gif)
 
-**ONE OF THE BEST WAYS TO LEARN RECURSIVE ALGORITHMS IS USING THE DEBUGGER IN CHROME**
+**ONE OF THE BEST WAYS TO LEARN RECURSIVE ALGORITHMS IS USING THE DEBUGGER IN CHROME OR VSCODE**
 
 **Time complexity**
 
@@ -181,11 +181,11 @@ Counting sort is an efficient algorithm for sorting an array of elements that ea
 
 ### Instructions
 
-Counting sort assumes that each of the n input elements in a list has a key value ranging from 0 to k, for some integer k. For each element in the list, counting sort determines the number of elements that are less than it. Counting sort can use this information to place the element directly into the correct slot of the output array.
+Counting sort assumes that each of the n input elements in a list has a key value ranging from 0 to k, for some integer k. For each element in the list, counting sort **determines the number of elements that are less than it**. Counting sort can use this information to place the element directly into the correct slot of the output array.
 
 Counting sort uses three lists: the input list, A[0,1,…,n], the output list, B[0,1,…,n], and a list that serves as temporary memory, C[0,1,…,k]. Note that A and B have n slots (a slot for each element), while C contains k slots (a slot for each key value).
 
-Counting sort starts by going through A, and for each element A[i], it goes to the index of C that has the same value as A[i] (so it goes to C[A[i]]) and increments the value of C[A[i]] by one. This means that if A has seven 0’s in its list, after counting sort has gone through all n elements of A, the value at C[0] will be 7. Similarly, if A has two 4’s, after counting sort has gone through all of the elements of A, C[4] (using 0 indexing) will be equal to 2. In this step, C keeps track of how many elements in A there are that have the same value of a particular index in C. In other words, the indices of C correspond to the values of elements in A, and the values in C correspond to the total number of times that a value in A appears in A.
+Counting sort starts by going through A, and for each element A[i], it goes to the index of C that has the same value as A[i] (so it goes to C[A[i]]) and increments the value of C[A[i]] by one. This means that if A has seven 0’s in its list, after counting sort has gone through all n elements of A, the value at C[0] will be 7. Similarly, if A has two 4’s, after counting sort has gone through all of the elements of A, C[4] (using 0 indexing) will be equal to 2. In this step, **C keeps track of how many elements in A there are that have the same value of a particular index in C**. In other words, the indices of C correspond to the values of elements in A, and the values in C correspond to the total number of times that a value in A appears in A.
 
 ![Counting Sort](.\countingsort.gif)
 

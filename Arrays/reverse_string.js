@@ -30,19 +30,21 @@ function reverse3(str) {
 // ES6 hack
 const reverse4 = (str) => [...str].reverse().join('');
 
+const myStr = 'Hi my name is Olli';
+
 console.log('====================================');
 console.log('FIRST METHOD');
 console.log('====================================');
-console.log(reverse1('Hi my name is Olli'));
+console.log(reverse1(myStr));
 console.log('====================================');
 console.log('SECOND METHOD');
 console.log('====================================');
-console.log(reverse2('Hi my name is Olli'));
+console.log(reverse2(myStr));
 console.log('====================================');
 console.log('THIRD METHOD');
 console.log('====================================');
-console.log(reverse3('Hi my name is Olli'));
+console.log(reverse3(myStr));
 console.log('====================================');
 console.log('FOURTH METHOD');
 console.log('====================================');
-console.log(reverse4('Hi my name is Olli'));
+console.log(reverse4(myStr));

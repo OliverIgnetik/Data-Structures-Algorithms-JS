@@ -17,6 +17,7 @@ function findNemo(array) {
 function findNemo2(array) {
   let t0 = new Date();
   let found = false;
+  // pythonic syntax
   for (let element of array) {
     if (element === 'nemo') {
       found = true;
