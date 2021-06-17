@@ -117,7 +117,8 @@ const kadane_algorithm = (arr) => {
     // maxSum and maxSubArray
     if (runningSum > maxSum) {
       maxSum = runningSum;
-      maxSubArray = runningSubArray;
+      // make sure to use the spread operator and do a deeper copy
+      maxSubArray = [...runningSubArray];
     }
   }
   return [maxSum, maxSubArray];
